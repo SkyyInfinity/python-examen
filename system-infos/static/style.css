@@ -1,0 +1,118 @@
+/* ─────────────────────────────────────────────────────────
+/* ------------------ C S S   S T A R T --------------------
+/* ───────────────────────────────────────────────────────── */
+
+/* ─── VARIABLE ──────────────────────────────────────────── */
+:root {
+    --c-primary: #537FE7;
+    --c-primary-lighter: hsl(222, 76%, 92%);
+}
+
+/* ─── BASE ──────────────────────────────────────────────── */
+body {
+    padding: 64px;
+    font-family: system-ui, sans-serif;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f7f8f9;
+}
+ul {
+    list-style: none;
+}
+
+/* ─── MODULE ────────────────────────────────────────────── */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 64px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+}
+.box {
+    background-color: #fff;
+    transition: transform 0.2s ease;
+    border-radius: 16px;
+    aspect-ratio: 4/3;
+    box-shadow: 4px 4px 20px -8px rgba(0, 0, 0, 0.25);
+    transform: rotate3d(0, 0, 0, 0);
+}
+.box:hover {
+    transform: rotate3d(-1, 1, 2, 8deg);
+}
+.box h2 {
+    padding: 32px;
+    width: 100%;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+    border-bottom: 1px solid #ededed;
+}
+.box ul {
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+}
+.box li {
+    line-height: 1 !important;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    font-weight: 900;
+    font-size: 36px;
+    height: max-content;
+}
+.box li span {
+    color: var(--c-primary);
+    border: 1px solid var(--c-primary);
+    font-size: 14px;
+    line-height: 1;
+    font-weight: bold;
+    height: max-content;
+    display: block;
+    padding: 4px 8px;
+    border-radius: 150px;
+    background-color: var(--c-primary-lighter);
+    width: max-content;
+}
+
+/* ─── STATE ─────────────────────────────────────────────── */
+
+/* ─── THEME ─────────────────────────────────────────────── */
+
+/* ─── RESPONSIVE ────────────────────────────────────────── */
+@media screen and (max-width: 1200px) {
+
+}
+@media screen and (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 480px) {
+
+}
+
+/* ─────────────────────────────────────────────────────────
+/* ------------------- C S S   E N D -----------------------
+/* ───────────────────────────────────────────────────────── */

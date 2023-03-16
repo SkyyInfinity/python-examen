@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='reset.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>System informations</h1>
+        <div class="grid">
+            <div class="box os">
+                <h2>Operating system</h2>
+                <ul class="list os-list">
+                    <li><span>System:</span> {{ system.os.system }}</li>
+                    <li><span>Version:</span> {{ system.os.release }}</li>
+                </ul>
+            </div>
+            <div class="box cpu">
+                <h2>CPU</h2>
+                <ul class="list cpu-list">
+                    <li><span>Used:</span> {{ system.cpu.used }}%</li>
+                </ul>
+            </div>
+            <div class="box memory">
+                <h2>Virtual memory</h2>
+                <ul class="list memory-list">
+                    <li><span>Free:</span> {{ system.memory.free }}%</li>
+                    <li><span>Used:</span> {{ system.memory.used }}G / {{ system.memory.total }}G</li>
+                </ul>
+            </div>
+            <div class="box socket">
+                <h2>Other</h2>
+                <ul class="list memory-list">
+                    <li><span>Desktop name:</span> {{ system.socket.hostname }}</li>
+                    <li><span>IP address:</span> {{ system.socket.ip }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
